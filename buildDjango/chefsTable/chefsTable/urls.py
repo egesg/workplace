@@ -14,8 +14,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+
+from littleLemon import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    # path("", views.home, name = "home") ->  works without suffix  -> http://127.0.0.1:8000/home
+ 
+    path("say_hello/", views.say_hello), # works only with suffix -> http://127.0.0.1:8000/say_hello/
+    path('homepage/', views.homepage), # works only with suffix -> http://127.0.0.1:8000/homepage/
+
+    path("display_date/", views.display_date),
+
+    path("menu/", views.menu),
 ]
