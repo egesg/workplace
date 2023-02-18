@@ -28,4 +28,10 @@ urlpatterns = [
     path("display_date/", views.display_date),
 
     path("menu/", views.menu),
+
+    path("home/", views.home, name = "home"), # http://127.0.0.1:8000/home/ -> path prints "/home/" -> path is displayed in the main window of browser and it is the same as the order in which you pressed inside the url patterns list
+
+    path("", views.home, name = "home") # http://127.0.0.1:8000 -> path prints "/" -> path is displayed in the main window of browser and it is the same as the order in which you pressed inside the url patterns list
+
+
 ]

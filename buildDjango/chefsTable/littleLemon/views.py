@@ -16,3 +16,9 @@ def display_date(request):
 def menu(request):
     text = """<h1 style="color: #F4CE14;"> This is Little Lemon again!</h1>"""
     return HttpResponse(text)
+
+def home(request):
+    path = request.path
+    # return HttpResponse(path, content_type='text/html', charset='utf-8')
+    response = HttpResponse("This works!")
+    return response # run it, see the text displayed in the browser
