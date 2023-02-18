@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from littleLemon import views
+from littleLemon import views # or from . import views  
 
 urlpatterns = [
     path("admin/", admin.site.urls),
